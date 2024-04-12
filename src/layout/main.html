@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- head 中 -->
+        <link rel="stylesheet" href="css/materialize.min.css">
+
+
+        <title>H5 网页示例</title>
+    </head>
+    <body>
+
+<!--        <div>-->
+<!--            本APP由Edgar_ye创建-->
+<!--            -->
+<!--        </div>-->
+
+        <div>
+            <ul class="collapsible popout" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header">
+                        安全巡查
+                        <span class="badge">
+                            <!--        下面的是标记是否自动执行当前脚本-->
+                            <label>
+                                <input type="checkbox" name="xvncha" id="xvncha" class="filled-in"/>
+                                <span></span>
+                            </label>
+
+
+                        </span>
+                    </div>
+
+
+                    <div class="collapsible-body">
+
+
+                        <p>
+                            使用方法：将文件传输助手置顶，打开无障碍，打开壁纸服务即可
+                        </p>
+                        <p>
+
+                            <a href="xvncha.html">点击此处设置参数</a>
+                        </p>
+                    </div>
+                </li>
+
+
+
+
+                <li>
+                    <div class="collapsible-header">
+                        安全巡查
+                        <span class="badge">
+                            <!--        下面的是标记是否自动执行当前脚本-->
+                            <label>
+                                <input type="checkbox" name="xvncha" id="sing" class="filled-in"/>
+                                <span></span>
+                            </label>
+
+
+                        </span>
+                    </div>
+
+
+                    <div class="collapsible-body">
+                        <p>
+
+                            <a href="xvncha.html">自动化安全巡查</a>
+                        </p>
+                    </div>
+                </li>
+
+
+
+
+
+            </ul>
+
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="col s6">
+                <button class="btn waves-effect waves-light " type="button" name="action" onclick="javascript:save()">
+                    保存参数
+                </button>
+            </div>
+            <div class="col s6">
+                <button class="btn waves-effect waves-light" type="button" name="action"
+                        onclick="javascript:window.ec.start()">
+                    启动脚本
+                </button>
+            </div>
+        </div>
+
+
+        <!-- body 最后 -->
+        <script src="htmljs/jquery.min.js"></script>
+        <script src="htmljs/materialize.min.js"></script>
+
+
+    </body>
+
+    <script>
+        <!--    这个是初始化折叠页面-->
+        $(document).ready(function () {
+            $('.collapsible').collapsible();
+            $('select').material_select();
+
+        });
+
+
+        window.ec.hideStartBtn();
+    </script>
+
+</html>

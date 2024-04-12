@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- head 中 -->
+        <link rel="stylesheet" href="css/materialize.min.css">
+
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <title>H5 网页示例</title>
+    </head>
+    <body style="margin-left: 10px;margin-right: 10px">
+
+
+        <div class="input-field  inline col s4">
+            <input id="my_name" type="text" class="validate">
+            <label for="my_name">姓名</label>
+        </div>
+
+
+        <div>
+
+
+
+            <div>属地区域</div>
+            <div>
+                <label>
+                    <input type="checkbox" name="shudi" id="公用工程工区" class="filled-in"/>
+                    <span>公用工程工区</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" name="shudi" id="硅烷回收工区" class="filled-in"/>
+                    <span>硅烷回收工区</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" name="shudi" id="还原1工区" class="filled-in"/>
+                    <span>还原1工区</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" name="shudi" id="还原2工区" class="filled-in"/>
+                    <span>还原2工区</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" name="shudi" id="还原3工区" class="filled-in"/>
+                    <span>还原3工区</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" name="shudi" id="尾气1工区" class="filled-in"/>
+                    <span>尾气1工区</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" name="shudi" id="尾气2工区" class="filled-in"/>
+                    <span>尾气2工区</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" name="shudi" id="尾气3工区" class="filled-in"/>
+                    <span>尾气3工区</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" name="shudi" id="精馏1工区" class="filled-in"/>
+                    <span>精馏1工区</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" name="shudi" id="精馏2工区" class="filled-in"/>
+                    <span>精馏2工区</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" name="shudi" id="精馏3工区" class="filled-in"/>
+                    <span>精馏3工区</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" name="shudi" id="冷氢化1工区" class="filled-in"/>
+                    <span>冷氢化1工区</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" name="shudi" id="冷氢化2工区" class="filled-in"/>
+                    <span>冷氢化2工区</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" name="shudi" id="冷氢化3工区" class="filled-in"/>
+                    <span>冷氢化3工区</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" name="shudi" id="整理1工区" class="filled-in"/>
+                    <span>整理1工区</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" name="shudi" id="整理2工区" class="filled-in"/>
+                    <span>整理2工区</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" name="shudi" id="整理3工区" class="filled-in"/>
+                    <span>整理3工区</span>
+                </label>
+            </div>
+
+        </div>
+
+
+
+        <div class="row">
+
+            <div class="col s6">
+                <button class="btn waves-effect waves-light " type="button" name="action" onclick="javascript:save()">
+                    保存参数
+                </button>
+            </div>
+            <div class="col s6">
+                <button class="btn waves-effect waves-light" type="button" name="action"
+                        onclick="javascript:window.ec.start()">
+                    启动脚本
+                </button>
+            </div>
+        </div>
+
+        <script src="htmljs/jquery.min.js"></script>
+        <script src="htmljs/materialize.min.js"></script>
+
+
+    </body>
+
+
+    <script>
+
+
+        $(function () {
+
+            //使用jquery进行设置值
+            //取得参数并且进行设置
+
+            var my_name = window.ec.getConfig("my_name");
+            $("#my_name").val(my_name);
+
+
+            var 公用工程工区 = window.ec.getConfig("公用工程工区");
+            if (公用工程工区 === "true") {
+                $("#公用工程工区").attr("checked", "checked");
+            }
+
+            var 硅烷回收工区 = window.ec.getConfig("硅烷回收工区");
+            if (硅烷回收工区 === "true") {
+                $("#硅烷回收工区").attr("checked", "checked");
+            }
+
+            var 还原1工区 = window.ec.getConfig("还原1工区");
+            if (还原1工区 === "true") {
+                $("#还原1工区").attr("checked", "checked");
+            }
+
+            var 还原2工区 = window.ec.getConfig("还原2工区");
+            if (还原2工区 === "true") {
+                $("#还原2工区").attr("checked", "checked");
+            }
+
+            var 还原3工区 = window.ec.getConfig("还原3工区");
+            if (还原3工区 === "true") {
+                $("#还原3工区").attr("checked", "checked");
+            }
+
+            var 尾气1工区 = window.ec.getConfig("尾气1工区");
+            if (尾气1工区 === "true") {
+                $("#尾气1工区").attr("checked", "checked");
+            }
+
+            var 尾气2工区 = window.ec.getConfig("尾气2工区");
+            if (尾气2工区 === "true") {
+                $("#尾气2工区").attr("checked", "checked");
+            }
+
+            var 尾气3工区 = window.ec.getConfig("尾气3工区");
+            if (尾气3工区 === "true") {
+                $("#尾气3工区").attr("checked", "checked");
+            }
+
+            var 精馏1工区 = window.ec.getConfig("精馏1工区");
+            if (精馏1工区 === "true") {
+                $("#精馏1工区").attr("checked", "checked");
+            }
+
+            var 精馏2工区 = window.ec.getConfig("精馏2工区");
+            if (精馏2工区 === "true") {
+                $("#精馏2工区").attr("checked", "checked");
+            }
+
+            var 精馏3工区 = window.ec.getConfig("精馏3工区");
+            if (精馏3工区 === "true") {
+                $("#精馏3工区").attr("checked", "checked");
+            }
+
+            var 冷氢化1工区 = window.ec.getConfig("冷氢化1工区");
+            if (冷氢化1工区 === "true") {
+                $("#冷氢化1工区").attr("checked", "checked");
+            }
+
+            var 冷氢化2工区 = window.ec.getConfig("冷氢化2工区");
+            if (冷氢化2工区 === "true") {
+                $("#冷氢化2工区").attr("checked", "checked");
+            }
+
+            var 冷氢化3工区 = window.ec.getConfig("冷氢化3工区");
+            if (冷氢化3工区 === "true") {
+                $("#冷氢化3工区").attr("checked", "checked");
+            }
+
+            var 整理1工区 = window.ec.getConfig("整理1工区");
+            if (整理1工区 === "true") {
+                $("#整理1工区").attr("checked", "checked");
+            }
+
+            var 整理2工区 = window.ec.getConfig("整理2工区");
+            if (整理2工区 === "true") {
+                $("#整理2工区").attr("checked", "checked");
+            }
+
+            var 整理3工区 = window.ec.getConfig("整理3工区");
+            if (整理3工区 === "true") {
+                $("#整理3工区").attr("checked", "checked");
+            }
+
+
+
+
+
+            window.ec.hideStartBtn();
+        });
+
+
+        //保存参数的函数
+        function save() {
+
+
+            var my_name = $("#my_name").val();
+            window.ec.saveConfig("my_name", my_name);
+
+
+            window.ec.saveConfig("公用工程工区", $("#公用工程工区").prop("checked"));
+            window.ec.saveConfig("硅烷回收工区", $("#硅烷回收工区").prop("checked"));
+            window.ec.saveConfig("还原1工区", $("#还原1工区").prop("checked"));
+            window.ec.saveConfig("还原2工区", $("#还原2工区").prop("checked"));
+            window.ec.saveConfig("还原3工区", $("#还原3工区").prop("checked"));
+            window.ec.saveConfig("尾气1工区", $("#尾气1工区").prop("checked"));
+            window.ec.saveConfig("尾气2工区", $("#尾气2工区").prop("checked"));
+            window.ec.saveConfig("尾气3工区", $("#尾气3工区").prop("checked"));
+            window.ec.saveConfig("精馏1工区", $("#精馏1工区").prop("checked"));
+            window.ec.saveConfig("精馏2工区", $("#精馏2工区").prop("checked"));
+            window.ec.saveConfig("精馏3工区", $("#精馏3工区").prop("checked"));
+            window.ec.saveConfig("冷氢化1工区", $("#冷氢化1工区").prop("checked"));
+            window.ec.saveConfig("冷氢化2工区", $("#冷氢化2工区").prop("checked"));
+            window.ec.saveConfig("冷氢化3工区", $("#冷氢化3工区").prop("checked"));
+            window.ec.saveConfig("整理1工区", $("#整理1工区").prop("checked"));
+            window.ec.saveConfig("整理2工区", $("#整理2工区").prop("checked"));
+            window.ec.saveConfig("整理3工区", $("#整理3工区").prop("checked"));
+
+
+
+            window.ec.toast("保存成功");
+
+
+        }
+
+
+    </script>
+</html>
